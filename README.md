@@ -6,7 +6,12 @@ In the camera, the video shows a person's footmarks.
 
 ## Changes made during coding
 Changed the canvas to ground colour.
-* Using draw function to create the frame, focus point, the REC sign and the battery.
+* Using draw function to create the frame, focus point, the REC sign and the battery (frame).
+
+Added the setTimeout fuction in order to make the battery has different level (colour: green, orange, red and empty)
+- Giving each level function a time to start.
+* For the empty level, I made the camera shut down in one second after the battery becomes 0%.
+  - Made function cameraTurnOff using the clear function and the erase function - the canvas completely becomes blank
 
 ### Problems met
 * The experiment: 
@@ -16,7 +21,6 @@ Then I created a variable x (let x = 0), copy the setTimeout function both in th
 
 * The problem:
 I noticed that, as the dot flashing, the flashing speed also decelerated. I figured out this method cannot really achieve what I expected. So I changed the plan of making a flashing red dot to just a red dot.
-
 
 I experimented with setTimeout function for footmark - footmark is not able to stop creating. 
 
