@@ -3,11 +3,15 @@ let countInterval = setInterval(footmark, 1000);
 let x = 0;
 let y = 0;
 
-
 function setup() {
   createCanvas(600, 400);
   background(170, 120, 40);
-  // setTimeout(redDot, 1000);
+  setTimeout(batteryGreen, 0);
+  setTimeout(batteryOrange, 2000);
+  setTimeout(batteryRed, 4000);
+  setTimeout(batteryEmpty, 6000);
+  setTimeout(cameraTurnOff, 7000);
+  
   // setTimeout(redDotDisappear, 2000);
 
   // setTimeout(footmark, 1000 ,random (0, width), random(0, height), color(60));
@@ -15,7 +19,6 @@ function setup() {
   // for (x = 0; x < 5 - random(0, 3); x++) {
   //   footmark(random(0, width - 80), random(0, height - 80), 80, color(108, 148, 87));
   // }
-
 }
 
 function draw() {
@@ -35,7 +38,6 @@ function draw() {
   strokeWeight(5)
   point(300, 200);
   // REC
-
   stroke(255, 0, 0);
   strokeWeight(10);
   point(495, 60);
@@ -51,8 +53,51 @@ function draw() {
   rect(52, 50, 36, 16);
   fill(255);
   rect(89, 54, 5, 8);
+  // battery level
+  // fill(0, 255, 0); 
+  // quad(52, 51, 65, 51, 62, 66, 52, 66);
+  // quad(65, 51, 78, 51, 75, 66, 62, 66);
+  // quad(78, 51, 88, 51, 88, 66, 75, 66);
 }
 
+function batteryGreen(){
+stroke(255);
+fill(0, 255, 0); 
+quad(52, 51, 65, 51, 62, 66, 52, 66);
+quad(65, 51, 78, 51, 75, 66, 62, 66);
+quad(78, 51, 88, 51, 88, 66, 75, 66);
+}
+
+function batteryOrange(){
+  stroke(255);
+  fill(250, 200, 0); 
+  quad(52, 51, 65, 51, 62, 66, 52, 66);
+  quad(65, 51, 78, 51, 75, 66, 62, 66);
+  fill(170, 120, 40);
+  quad(78, 51, 88, 51, 88, 66, 75, 66);
+}
+
+function batteryRed(){
+  stroke(255);
+  fill(255, 0, 0); 
+  quad(52, 51, 65, 51, 62, 66, 52, 66);
+  fill(170, 120, 40);
+  quad(65, 51, 78, 51, 75, 66, 62, 66);
+  quad(78, 51, 88, 51, 88, 66, 75, 66);
+}
+
+function batteryEmpty(){
+  stroke(255);
+  fill(170, 120, 40);
+  quad(52, 51, 65, 51, 62, 66, 52, 66);
+  quad(65, 51, 78, 51, 75, 66, 62, 66);
+  quad(78, 51, 88, 51, 88, 66, 75, 66);
+}
+
+function cameraTurnOff(){
+  clear();
+  erase();
+}
 // function redDot(){
 //   stroke(255, 0, 0);
 //   strokeWeight(10);
@@ -67,7 +112,6 @@ function draw() {
 //   point(495, 60);
 //   setTimeout(redDotDisappear, 4000);
 // }
-
 
 // function footmark(x, y, colour){
 //   fill(colour);
